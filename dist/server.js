@@ -29,7 +29,6 @@ const UsuarioRoutes_1 = require("./routes/UsuarioRoutes");
 const VentaRoutes_1 = require("./routes/VentaRoutes");
 const SalidaRouter_1 = require("./routes/SalidaRouter");
 const Tipo_accionRoutes_1 = require("./routes/Tipo_accionRoutes");
-const TrataImagen_1 = require("./helpers/TrataImagen");
 const MonedaRoutes_1 = require("./routes/MonedaRoutes");
 const DiarioRoutes_1 = require("./routes/DiarioRoutes");
 const MonedaArchivo_1 = require("./helpers/MonedaArchivo");
@@ -37,7 +36,7 @@ class Gestion_web_Solutel extends config_1.ConfigServer {
     constructor() {
         super();
         this.app = (0, express_1.default)();
-        this.port = 3000;
+        this.port = 4000;
         this.routers = () => {
             return [
                 new AccionRoutes_1.AccionRouter().router,
@@ -66,18 +65,21 @@ class Gestion_web_Solutel extends config_1.ConfigServer {
             ];
         };
         this.startBuild = () => {
-            const { exec } = require('child_process'); // Solo una declaración
+            const { exec } = require('child_process');
             const fs = require('fs');
             const path = './Imagenes';
             // Crear la carpeta "Imagenes" si no existe
             if (!fs.existsSync(path)) {
                 fs.mkdirSync(path);
             }
-            process.stdin.resume(); // Mantener la terminal abierta process.stdin.resume();
+            // Iniciar el servidor
+            this.app.listen(this.port, () => {
+                console.log(`Servidor corriendo en el puerto ${this.port}`);
+            });
+            process.stdin.resume(); // Mantener la terminal abierta
         };
         try {
             (0, MonedaArchivo_1.crearArchivoSiNoExiste)();
-            (0, TrataImagen_1.crearRutaSiNoExiste)("C:\\Solutel1_web_Imagenes");
             this.app.use(express_1.default.json({ limit: '50mb' })); // Aumenta el límite del body a 50MB
             this.app.use(express_1.default.urlencoded({ extended: true, limit: '50mb' })); // Aumenta el límite de los datos codificados en URL
             this.app.use((0, morgan_1.default)("dev"));

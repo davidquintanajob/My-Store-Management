@@ -82,7 +82,7 @@ class Gestion_web_Solutel extends ConfigServer {
         ];
     }
     startBuild = () => {
-        const { exec } = require('child_process'); // Solo una declaración
+        const { exec } = require('child_process');
         const fs = require('fs');
         const path = './Imagenes';
 
@@ -90,7 +90,13 @@ class Gestion_web_Solutel extends ConfigServer {
         if (!fs.existsSync(path)) {
             fs.mkdirSync(path);
         }
-        process.stdin.resume();// Mantener la terminal abierta process.stdin.resume();
+
+        // Iniciar el servidor
+        this.app.listen(this.port, () => {
+            console.log(`Servidor corriendo en el puerto ${this.port}`);
+        });
+
+        process.stdin.resume();// Mantener la terminal abierta
     }
 }
 
