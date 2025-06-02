@@ -1,0 +1,34 @@
+import { Response, Request } from "express";
+import { ProductoService } from "../services/ProductoService";
+import { TiendaService } from "../services/TiendaService";
+import { Producto_tiendaService } from "../services/Producto_tiendaService";
+import { EntradaService } from "../services/EntradaService";
+import { SalidaService } from "../services/SalidaService";
+import { ServicioService } from "../services/ServicioService";
+import { VentaService } from "../services/VentaService";
+export declare class ProductoController {
+    private readonly productoService;
+    private readonly tiendaService;
+    private readonly producto_tienda;
+    private readonly entradaService;
+    private readonly salidaService;
+    private readonly ventaService;
+    private readonly servicioService;
+    constructor(productoService?: ProductoService, tiendaService?: TiendaService, prodcuto_tienda?: Producto_tiendaService, entradaService?: EntradaService, salidaService?: SalidaService, ventaService?: VentaService, servicioService?: ServicioService);
+    createProducto(req: Request, res: Response): Promise<void>;
+    getProducto(req: Request, res: Response): Promise<void>;
+    getProductoById(req: Request, res: Response): Promise<void>;
+    updateProducto(req: Request, res: Response): Promise<void>;
+    deleteProducto(req: Request, res: Response): Promise<void>;
+    getAllImages(req: Request, res: Response): Promise<void>;
+    filtrarProducto(req: Request, res: Response): Promise<void>;
+    OrdenarProductos(req: Request, res: Response): Promise<void>;
+    AgregarTiendaAProducto(req: Request, res: Response): Promise<void>;
+    DeleteAllTiendasinProducto(req: Request, res: Response): Promise<void>;
+    HacerExcel(req: Request, res: Response): Promise<void>;
+    ImportarExcel(req: Request, res: Response): Promise<void>;
+    findbySku(req: Request, res: Response): Promise<void>;
+    getAllPaginated(req: Request, res: Response): Promise<void>;
+    HacerExcelwithColumns(req: Request, res: Response): Promise<void>;
+    machearProducto(req: Request, res: Response): Promise<void>;
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Gestion_Solutel",
+  "version": "1.0.0",
+  "description": "software para solutel",
+  "main": "dist/server.js",
+  "bin": "dist/server.js",
+  "pkg": {
+    "targets": [
+      "node18-win-x64"
+    ],
+    "assets": [
+      "Imagenes/**/*",
+      "dist/**/*",
+      "node_modules/**/*",
+      ".env",
+      "daily_license.lic"
+    ],
+    "outputPath": "./build"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "start:dev": "concurrently \"tsc -w\" \"nodemon dist/server.js\"",
+    "start:prod": "concurrently \"npm run build\" \"SET NODE_ENV=production && node dist/server.js\" \"cd ./Imagenes && http-server -p 8080\"",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "migration:run": "npm run typeorm migration:run -- -c ormconfig.ts",
+    "package:build": "tsc",
+    "package:pkg": "pkg --targets node18-win-x64 --options max_old_space_size=4096 dist/server.js",
+    "package:copy": "if not exist dist-package mkdir dist-package && xcopy /E /I build dist-package && copy .env.example dist-package\\.env && copy README.md dist-package\\ && copy daily_license.lic dist-package\\",
+    "package:zip": "cd dist-package && powershell Compress-Archive -Path * -DestinationPath ..\\dist-package.zip -Force",
+    "package": "npm run package:build && npm run package:pkg && npm run package:copy && npm run package:zip"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "class-validator": "^0.14.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-notifier": "^10.0.1",
+    "nodemailer": "^6.9.16",
+    "pg": "^8.14.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/morgan": "^1.9.9",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^20.11.30",
+    "@types/node-notifier": "^8.0.5",
+    "@types/nodemailer": "^6.4.17",
+    "@types/pg": "^8.11.11",
+    "concurrently": "^9.1.2",
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.7",
+    "npx": "^10.2.2",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.3"
+  }
+}
