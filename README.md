@@ -1,57 +1,60 @@
 # 🚀 My-Store-Management
 
 
-![Banner o imagen destacada](./Image/logo.png)
+![Banner or featured image](./Image/logo.png)
 
 > ## Project Description  
 > This is a website created for the management of stores, users, projects, suppliers, customers, inputs, outputs, movements, sales, debts and more products of a company or small business.
 
->## 🌟 Demo en Vivo
->[![Ver Demo](https://img.shields.io/badge/🌐_Ver_Demo-Online-green?style=for-the-badge)](https://tudominio.com)  
->### Accede con las siguientes credenciales:
->Administrador general: 
->  USER: administradorGeneral
->  CONT: 123456
->
+>## 🌟 Live Demo
+>[![View Demo](https://img.shields.io/badge/🌐_View_Demo-Online-green?style=for-the-badge)](http://31.170.165.44:19006)  
 
-## 📌 Características Principales
-- ✅ **Interactividad**: Filtros de productos, ventas, entradas en tiempo real
-- ✅ **Diseño Responsivo**: Compatible con móviles, tablets y desktop
-- ✅ **Funcionalidad**: Gestión en tiempo real de todo lo relacionado con productos de su negocio
-
-## 🛠️ Tecnologías Usadas
-| Frontend               | Backend              | Herramientas          |
-|------------------------|----------------------|-----------------------|
-| ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white) | ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=nodedotjs&logoColor=white) | ![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white) |
-| ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white) | ![Express](https://img.shields.io/badge/-Express-000000?logo=express&logoColor=white) | ![VSCode](https://img.shields.io/badge/-VSCode-007ACC?logo=visualstudiocode&logoColor=white) |
-| ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black) | ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb&logoColor=white) | ![Figma](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white) |
+>### 🔑 Demo Credentials
+>```plaintext
+>┌───────────────────────┬──────────────────────┬────────────┐
+>│       ROLE            │ USERNAME             │ PASSWORD   │
+>├───────────────────────┼──────────────────────┼────────────┤
+>│ General Administrator │ administradorGeneral │ 123456     │
+>│ Administrator         │ administrador        │ 123456     │
+>│ grocer                │ almacenero           │ 123456     │
+>│ seller                │ vendedor             │ 123456     │
+>└───────────────────────┴──────────────────────┴────────────┘
+>```
 
 
-## 🖼️ Capturas de Pantalla
+
+## 📌 Main Features
+- ✅ **Interactivity**: Real-time product, sales, and input filters
+- ✅ **Responsive Design**: Compatible with mobile, tablet, and desktop
+- ✅ **Functionality**: Real-time management of everything related to your business products
+
+## 🛠️ Technologies Used
+| Frontend               | Backend              | Tools                |
+|------------------------|----------------------|----------------------|
+| ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black) | ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=nodedotjs&logoColor=white) | ![VSCode](https://img.shields.io/badge/-VSCode-007ACC?logo=visualstudiocode&logoColor=white) |
+| ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white) | ![TypeORM](https://img.shields.io/badge/-TypeORM-000000?logo=typeorm&logoColor=white) | ![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white) |
+| ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black) | ![JWT](https://img.shields.io/badge/-JWT-000000?logo=jsonwebtokens&logoColor=white) | ![VisualParadigm](https://img.shields.io/badge/-VisualParadigm-000000?logo=visualparadigm&logoColor=white) |
+| ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white) | ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white) | ![Supabase](https://img.shields.io/badge/-Supabase-3ECF8E?logo=supabase&logoColor=white) |
+| ![Expo](https://img.shields.io/badge/-Expo-000020?logo=expo&logoColor=white) | ![Express](https://img.shields.io/badge/-Express-000000?logo=express&logoColor=white) | ![Postman](https://img.shields.io/badge/-Postman-FF6C37?logo=postman&logoColor=white) |
+| ![React Native](https://img.shields.io/badge/-React_Native-61DAFB?logo=react&logoColor=black) | ![bcrypt](https://img.shields.io/badge/-bcrypt-000000?logo=bcrypt&logoColor=white) | ![PM2](https://img.shields.io/badge/-PM2-2B037A?logo=pm2&logoColor=white) |
+| ![Axios](https://img.shields.io/badge/-Axios-5A29E4?logo=axios&logoColor=white) | | |
+
+
+## 🖼️ Screenshots
 | Desktop | Mobile |
 |---------|--------|
 | ![Desktop](./Image/Screenshot%202025-06-01%20152622.png) | ![Mobile](./Image/Screenshot%202025-06-01%20161409.png) |
 
-## 🚀 Cómo Empezar
+## 💻 Local Installation
 
-### Requisitos Previos Para Correr el Software de Forma Local
-- Node.js v16+
-- NPM/Yarn
-- Navegador moderno (Chrome, Firefox, Edge)
-- PostgresSQL v16+
+> To install this project locally, navigate to the frontend and backend branches respectively and follow the instructions:
 
-### Instalación
-> Para Instalar este proyecto de froma local dirijase a las ramas de frontend y backend respectivamente y siga las instrucciones
->FrontEnd: [![frontend](https://img.shields.io/badge/🌐_Ver_Demo-Online-green?style=for-the-badge)](https://tudominio.com) 
->BackEnd: [![backend](https://img.shields.io/badge/🌐_Ver_Demo-Online-green?style=for-the-badge)](https://tudominio.com) 
+<div style="display: flex; gap: 15px; margin-top: 15px; flex-wrap: wrap;">
 
-### Instalación
-```bash
-# Clonar repositorio
-git clone https://github.com/tu-usuario/tu-repo.git
+[![Frontend Repository](https://img.shields.io/badge/FRONTEND_Repository-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://github.com/davidquintanajob/My-Store-Management/tree/frontend)
 
-# Instalar dependencias
-npm install
+[![Backend Repository](https://img.shields.io/badge/BACKEND_Repository-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://github.com/davidquintanajob/My-Store-Management/tree/backend)
 
-# Iniciar servidor de desarrollo
-npm run dev
+</div>
+
+
