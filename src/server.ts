@@ -34,14 +34,13 @@ import { crearArchivoSiNoExiste } from "./helpers/MonedaArchivo";
 
 class Gestion_web_Solutel extends ConfigServer {
     public app: express.Application = express();
-    private port: number = 3000;
+    private port: number = 4000;
 
     constructor() {
         super();
 
         try {
             crearArchivoSiNoExiste();
-            crearRutaSiNoExiste("C:\\Solutel1_web_Imagenes")
             this.app.use(express.json({ limit: '50mb' })); // Aumenta el límite del body a 50MB
             this.app.use(express.urlencoded({ extended: true, limit: '50mb' })); // Aumenta el límite de los datos codificados en URL
             this.app.use(morgan("dev"));
