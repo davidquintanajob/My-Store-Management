@@ -1,0 +1,24 @@
+/* styles.css o el archivo CSS que estés usando */
+::-webkit-scrollbar {
+  height: 10px; /* Altura de la barra de desplazamiento */
+  border-radius: 10px; /* Redondea las esquinas externas de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #5687d1; /* Color de fondo del track*/
+  margin-bottom: 10px; /* Separa la barra hacia abajo */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #315a98; /* Color del thumb (parte que se desplaza) */
+  border-radius: 10px; /* Bordes redondeados del thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a365d; /* Color del thumb al pasar el mouse */
+}
+
+
+
+
+

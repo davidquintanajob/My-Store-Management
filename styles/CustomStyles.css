@@ -1,0 +1,10 @@
+.datePickerCustomWrapper {
+    height: 45px;
+    width: 45%;
+    border: 2px solid #1b5dad; /* azul_Claro */
+    border-radius: 10px;
+    background-color: #97e4f4; /* azul_Suave */
+    padding: 0 10px;
+    margin-left: 25%;
+    box-shadow: 0px 2px 5px rgba(27, 93, 173, 0.5); /* azul_Oscuro */
+  }
