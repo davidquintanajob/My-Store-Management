@@ -40,17 +40,17 @@ RESTful API for store management system with:
 ![Flow](./documentatio/Frow%20Diagram.png)
 
 >## 💻 Local Installation
->1- Cree una base de datos bacía con posgresSQL con un nombre de su preferencia (por ejemplo >"My-Store-Management-DB")
->2- Localice el archivo "DB_backup.sql" y restaure la base de datos recien creada con este archivo
->3- Ejecute en la raiz del proyecto "npm install" o "yarn install" si prefiere para instalar dependencias
->4- Cree en la raiz del proyecto un archivo ".env" con la siguiente estructura:
->DB_HOST=localhost #URL de la base de datos
->DB_PORT=5432 #Puerto de la base de datos
->DB_USERNAME=posgres #Nombre de su usuario en su postgres
->DB_PASSWORD=password #Su contraseña de postgres 
->DB_NAME=My-Store-Management-DB #Nombre que halla definido al crear la base de datos
->5- Abra una consola en la ubicación de la raiz del proyecto y ejecute el comando "npm start" para iniciar el servidor
->6- Si siguió los pasos el servidor deve correr en el puerto 4000
->7- Puede obtener un token de autentificación haciendo una solicitud HTTP a 
+>1. Create an empty PostgreSQL database with a name of your choice (e.g. "My-Store-Management-DB")
+>2. Locate the "DB_backup.sql" file and restore it into your newly created database
+>3. Run "npm install" or "yarn install" in the project root to install dependencies
+>4. Create a ".env" file in the project root with the following structure:
+>DB_HOST=localhost #Database URL
+>DB_PORT=5432 #Database port
+>DB_USERNAME=postgres #Your PostgreSQL username
+>DB_PASSWORD=password #Your PostgreSQL password
+>DB_NAME=My-Store-Management-DB #The database name you created
+>5. Open a terminal in the project root and execute "npm start" to launch the server
+>6. If all steps were followed correctly, the server should run on port 4000
+>7. You can obtain an authentication token by making an HTTP request to:
 >POST http://localhost:4000/Usuario/auth
->body: {nombre_usuario: administradorGeneral, contrasenna: 123456}
+>body: {username: administradorGeneral, password: 123456}
